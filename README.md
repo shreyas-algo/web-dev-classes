@@ -14,9 +14,20 @@ Source control -> 3rd button in VS Code
 4. cd "web-dev-classes"
 5. Open the folder in VS code
 
+# Setup git config
+0. Accept the collaboration invitation you received in your email
+1. Set config using following commands
+```
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+```
+Replace you@example.com and Your Name with your specific details related to git
+
 # Making changes:
+
 0. Make changes and review in source control
 1. git add -> stage files (+ button in source control)
 2. git commit -> opens a commit message window
 3. Write commit message -> Accept commit message -> CLick on right icon in top right
 4. Push -> using button on bottom left
+5. When you try to push changes for the first time, git may ask you to sign in, do that with your github account

@@ -3,6 +3,7 @@ Stores code for web dev classes from learning sessions
 
 This is Shreyas' first commit
 This iS Swapnil's first commit
+This iS Koustubh's first commit
 
 # git instructions
 Source control -> 3rd button in VS Code

@@ -4,6 +4,7 @@ Stores code for web dev classes from learning sessions
 This is Shreyas' first commit.
 This iS Swapnil's first commit.
 This iS Koustubh's first commit.
+Cheers to the new beginning.
 
 
 # git instructions

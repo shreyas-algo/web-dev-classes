@@ -74,12 +74,19 @@
         let screenValue = '';
 
         function appendNumber(number) {
+            if (number === '.' && screenValue.split(/[\s/*+-]+/).pop().includes('.')) {
+                return; // Prevent adding more than one decimal point in the current number
+            }
             screenValue += number;
             screen.value = screenValue;
         }
 
         function appendOperator(operator) {
-            screenValue += ' ' + operator + ' ';
+            if (/[+\-*/]$/.test(screenValue.trim())) {
+                screenValue = screenValue.trim().slice(0, -1) + operator;
+            } else {
+                screenValue += ' ' + operator + ' ';
+            }
             screen.value = screenValue;
         }
 

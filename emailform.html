@@ -1,0 +1,28 @@
+<!-- <input type="text"> -->
+<script>
+
+function validateEmail(email) {
+    // Check if email contains '@' and at least one dot after '@'
+    let atIndex = email.indexOf("@");
+    let dotIndex = email.lastIndexOf(".");
+
+    if (atIndex > 0 && dotIndex > atIndex + 1 && dotIndex < email.length - 1) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// Example usage
+const emails = [
+    "example@domain.com",
+    "example@domaincom",
+    "exampledomain.com",
+    "@domain.com",
+    "example@.com"
+];
+
+emails.forEach(email => {
+    console.log(`${email}: ${validateEmail(email)}`);
+});
+</script>

@@ -1,28 +1,44 @@
-<!-- <input type="text"> -->
-<script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation Form</title>
+</head>
+<body>
+    <form id="emailForm">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <button type="submit" onclick="validateEmail(document.getElementById('email').value)">
+            validate
+        </button>
+        
+    </form>
 
-function validateEmail(email) {
-    // Check if email contains '@' and at least one dot after '@'
-    let atIndex = email.indexOf("@");
-    let dotIndex = email.lastIndexOf(".");
+    <script>
+    function validateEmail(email) {
+        // Check if email contains '@' and at least one dot after '@'
+        let atIndex = email.indexOf("@");
+        let dotIndex = email.lastIndexOf(".");
 
-    if (atIndex > 0 && dotIndex > atIndex + 1 && dotIndex < email.length - 1) {
-        return true;
-    } else {
-        return false;
+        if (atIndex > 0 && dotIndex > atIndex + 1 && dotIndex < email.length - 1) {
+            alert('Email is valid');
+            return true;
+        }   else {
+            alert('Invalid email address');
+            return false;
+        }
     }
-}
 
-// Example usage
-const emails = [
-    "example@domain.com",
-    "example@domaincom",
-    "exampledomain.com",
-    "@domain.com",
-    "example@.com"
-];
-
-emails.forEach(email => {
-    console.log(`${email}: ${validateEmail(email)}`);
-});
-</script>
+    // document.getElementById('emailForm').addEventListener('submit', function(event) {
+    //     event.preventDefault(); // Prevent form from submitting
+    //     let email = document.getElementById('email').value;
+    //     if (!validateEmail(email)) {
+    //         alert('Invalid email address');
+    //     } else {
+    //         alert('Email is valid');
+    //     }
+    // });
+    </script>
+</body>
+</html>
